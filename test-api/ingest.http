@@ -1,0 +1,9 @@
+
+### Ingest Local Folder
+POST http://127.0.0.1:8000/api/ingest
+Content-Type: application/json
+
+{
+  "path": "./sample_repo"
+}
+
