@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from app.routes import ingest_router, query_router
+from app.routes.ingest import router as ingest_router
 
 app = FastAPI(
     title="AI Knowledge Gateway",
@@ -10,7 +10,6 @@ app = FastAPI(
 
 # Register routers
 app.include_router(ingest_router, prefix="/api")
-app.include_router(query_router, prefix="/api")
 
 @app.get("/health")
 async def health_check():
